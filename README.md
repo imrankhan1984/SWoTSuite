@@ -16,7 +16,7 @@ by Amelie Gyrard, in collaboration with Insight/NUIG-DERI, Ireland.
 For More detail, refer the following resources
 
 - Our papers at ISWC 2016: https://arxiv.org/abs/1609.09014 (8 pages). 
-- youtube Video: Application development process using SWoTSuite: https://www.youtube.com/watch?v=BMP8CXtXzGo
+- Application development process using SWoTSuite: https://www.youtube.com/watch?v=BMP8CXtXzGo
 
 
 ## Installation
