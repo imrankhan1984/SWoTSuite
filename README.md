@@ -1,4 +1,4 @@
-## Motivation
+## SWoTSuite, a Toolkit for Prototyping Cross-domain Semantic Web of Things Applications
 
 Semantic Web of Things (SWoT) applications focus on providing a wide-scale 
 interoperability that allows the sharing of IoT devices across domains and the reusing 
