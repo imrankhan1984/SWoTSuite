@@ -4,7 +4,7 @@ PREFIX m3: <http://sensormeasurement.appspot.com/m3#>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX naturopathy-dataset: <http://sensormeasurement.appspot.com/dataset/naturopathy-dataset/>
 
-SELECT DISTINCT ?name ?value ?unit ?inferType ?deduce ?suggest ?suggest_comment WHERE{
+SELECT DISTINCT ?deduce ?suggest WHERE{
 	?measurement m3:hasName ?name.
 	?measurement m3:hasValue ?value.
 	?measurement m3:hasDateTimeValue ?time.

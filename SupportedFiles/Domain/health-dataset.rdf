@@ -54,19 +54,5 @@
 		<rdfs:label xml:lang="en">HighFever</rdfs:label>
 	</health:Symptom>
 	
-	<health:Symptom rdf:about="NormalBodyTemperature">		
-		<rdfs:label xml:lang="en">NormalBodyTemperature</rdfs:label>
-	</health:Symptom>
 	
-	<health:Symptom rdf:about="MildHypothermia">		
-		<rdfs:label xml:lang="en">MildHypothermia</rdfs:label>
-	</health:Symptom>
-	
-	<health:Symptom rdf:about="ModerateHypothermia">		
-		<rdfs:label xml:lang="en">ModerateHypothermia</rdfs:label>
-	</health:Symptom>
-	
-	<health:Symptom rdf:about="SevereHypothermia">		
-		<rdfs:label xml:lang="en">SevereHypothermia</rdfs:label>
-	</health:Symptom>
 </rdf:RDF>

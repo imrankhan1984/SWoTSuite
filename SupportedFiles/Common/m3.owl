@@ -124,7 +124,6 @@ What is the difference between ssn:observes and ssn:observedProperty? -->
 	
 	<owl:Class rdf:ID="TransportM2MDevice">		
 		<rdfs:label xml:lang="en">Transport M2M Devices (sensors or actuators)</rdfs:label>
-
 		<rdfs:subClassOf rdf:resource="#DomainM2MDevice"/>	
 	</owl:Class>
 	
@@ -136,9 +135,8 @@ What is the difference between ssn:observes and ssn:observedProperty? -->
 		<txn:hasImage rdf:resource="http://sensormeasurement.appspot.com/images/sensor/fogLamp.png"/>
 	</owl:Class>
 	
-	<owl:Class rdf:ID="AlcoholLevelSensor">		
+	<owl:Class rdf:ID="AlcoholLevelSensor">
 		<rdfs:label xml:lang="en">AlcoholLevelSensor</rdfs:label>
-
 		<rdfs:subClassOf rdf:resource="#Sensor"/>	
 		<rdfs:subClassOf rdf:resource="#TransportM2MDevice"/>
 		<txn:hasImage rdf:resource="http://sensormeasurement.appspot.com/images/sensor/noise.png"/>
@@ -361,7 +359,6 @@ What is the difference between ssn:observes and ssn:observedProperty? -->
 	
 	<owl:Class rdf:ID="BloodPressureSensor">		
 		<rdfs:label xml:lang="en">Blood Pressure Sensor</rdfs:label>
-
 		<rdfs:subClassOf rdf:resource="#Sensor"/>
 		<rdfs:subClassOf rdf:resource="#HealthM2MDevice"/>
 		<txn:hasImage rdf:resource="http://sensormeasurement.appspot.com/images/sensor/bloodPressure.png"/>
@@ -375,7 +372,6 @@ What is the difference between ssn:observes and ssn:observedProperty? -->
 	
 	<owl:Class rdf:ID="CholesterolSensor">		
 		<rdfs:label xml:lang="en">Cholesterol Sensor</rdfs:label>
-
 		<rdfs:subClassOf rdf:resource="#Sensor"/>
 		<rdfs:subClassOf rdf:resource="#HealthM2MDevice"/>
 		<txn:hasImage rdf:resource="http://sensormeasurement.appspot.com/images/sensor/cholesterol.png"/>
@@ -389,7 +385,6 @@ What is the difference between ssn:observes and ssn:observedProperty? -->
 	
 	<owl:Class rdf:ID="WeightSensor">		
 		<rdfs:label xml:lang="en">Weight Sensor</rdfs:label>
-
 		<rdfs:subClassOf rdf:resource="#Sensor"/>
 		<rdfs:subClassOf rdf:resource="#HealthM2MDevice"/>
 		<txn:hasImage rdf:resource="http://sensormeasurement.appspot.com/images/sensor/weight.png"/>
