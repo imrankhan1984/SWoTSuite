@@ -83,10 +83,10 @@ public class Main {
 			GenericApplication generic_appli = new GenericApplication(model);
 
 			// STEP: SPECIFIC DOMAIN ONTOLOGIES AND DATASETS
-			ReadFile.enrichJenaModelOntologyDataset(generic_appli.model, M3_ONTOLOGY);
+			//ReadFile.enrichJenaModelOntologyDataset(generic_appli.model, M3_ONTOLOGY);
 			ReadFile.enrichJenaModelOntologyDataset(generic_appli.model, NATUROPATHY_ONTOLOGY);
 			ReadFile.enrichJenaModelOntologyDataset(generic_appli.model, NATUROPATHY_DATASET);
-			ReadFile.enrichJenaModelOntologyDataset(generic_appli.model, HEALTH_ONTOLOGY);
+		    ReadFile.enrichJenaModelOntologyDataset(generic_appli.model, HEALTH_ONTOLOGY);
 			ReadFile.enrichJenaModelOntologyDataset(generic_appli.model, HEALTH_DATASET);
 
 		

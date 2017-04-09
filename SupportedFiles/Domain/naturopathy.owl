@@ -18,9 +18,6 @@
          <!ENTITY OntoReaChir "http://www.yonamoke.com/ics/en/ressources">
          <!ENTITY registry "http://ontology-for-registry-of-children-with-special-needs.googlecode.com/svn-history/r23/trunk/Registry3.4.4.owl">
          
-         
-         
-         
 ]> 
 <rdf:RDF
         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -54,7 +51,6 @@
 		<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-09-12</dcterms:issued> 
  		<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-07-04</dcterms:modified> 
 		<owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
-		<rdfs:comment xml:lang="en">Thanks to Ghislain Atemezing, the Linked Open Vocabularies (LOV) and the Oops! Ontology Pitfall Scanner projects to build a well-written ontology. Thanks to the Parrot ontorule project to build the ontology documentation. </rdfs:comment>
 		<vs:term_status>Work in progress</vs:term_status>
 		<vann:preferredNamespacePrefix>naturopathy</vann:preferredNamespacePrefix> 
 	    <vann:preferredNamespaceUri>http://sensormeasurement.appspot.com/naturopathy#</vann:preferredNamespaceUri>
@@ -139,214 +135,19 @@
 	</owl:Ontology>
 	
 	
-  
-	<!-- Mapping Emotion to color Nijdam et al. 2009-->    
 	
-	<!-- ###################################################################################################################################################### -->
-	<!-- ################################################ USER PROFILE ############################################################################ -->
-	<!-- ###################################################################################################################################################### -->
-	
-	<owl:Class rdf:ID="Person">		
-		<rdfs:label xml:lang="en">Person</rdfs:label>
-			
-		<rdfs:seeAlso rdf:resource="&foaf;Person"/>
-		<rdfs:seeAlso rdf:resource="&registry;Person"/>
-		<rdfs:seeAlso rdf:resource="&Person_SH_Ontology;Person"/>
-	</owl:Class>
-	
-	<owl:Class rdf:ID="Patient">		
-		<rdfs:label xml:lang="en">Patient</rdfs:label>
-			
-		<rdfs:subClassOf rdf:resource="#Person"/>	
-		<rdfs:seeAlso rdf:resource="&registry;Patient"/>
-		<rdfs:seeAlso rdf:resource="&Person_SH_Ontology;Patient"/>
-	</owl:Class>	
-	
-	<owl:ObjectProperty rdf:ID="likes">
-  		<rdfs:domain rdf:resource="#Person"/>
- 		<rdfs:range  rdf:resource="#Food"/>
-		<rdfs:label xml:lang="en">likes</rdfs:label>
-		
-	</owl:ObjectProperty>
-	
-	<owl:ObjectProperty rdf:ID="hates">
-  		<rdfs:domain rdf:resource="#Person"/>
- 		<rdfs:range  rdf:resource="#Food"/>
-		<rdfs:label xml:lang="en">hates</rdfs:label>
-		
-	</owl:ObjectProperty>
-	
-	<owl:DatatypeProperty rdf:ID="hasDisease">
- 		<rdfs:range  rdf:resource="#Disease"/>
-		<rdfs:label xml:lang="en">hasDisease</rdfs:label>
-		
-		<rdfs:seeAlso rdf:resource="&Person_SH_Ontology;hasDisease"/>
-	</owl:DatatypeProperty>
-	
-
-
-	<owl:DatatypeProperty rdf:ID="hasDiet">
-  		<rdfs:domain rdf:resource="#Person"/>
- 		<rdfs:range  rdf:resource="#Diet"/>
-		<rdfs:label xml:lang="en">hasDiet</rdfs:label>
-		
-	</owl:DatatypeProperty>
-	
-	<owl:DatatypeProperty rdf:ID="hasAllergy">
-  		<rdfs:domain rdf:resource="#Person"/>
- 		<rdfs:range  rdf:resource="#Allergy"/>
-		<rdfs:label xml:lang="en">hasAllergy</rdfs:label>
-		
-		<rdfs:seeAlso rdf:resource="&Person_SH_Ontology;hasAllergy"/>
-	</owl:DatatypeProperty>
-	
- 	
-	  	<!-- ################################################ CONCEPTS ############################################################################ -->
-	    
 	<owl:Class rdf:ID="Food">		
-		<rdfs:label xml:lang="en">Food</rdfs:label>
-		
+		<rdfs:label xml:lang="en">Food</rdfs:label>		
 		<owl:equivalentClass rdf:resource="&food_smart_product;FoodOrDrinkItem"/>
-	</owl:Class>
-	
-	<owl:Class rdf:ID="Disease">		
-		<rdfs:label xml:lang="en">Disease, ailments</rdfs:label>
-		
-		<rdfs:seeAlso rdf:resource="&OntoReaChir;Disease"/>
-		<rdfs:seeAlso rdf:resource="&Person_SH_Ontology;Disease"/>
-	</owl:Class>
-	
-	<owl:Class rdf:ID="Diet">		
-		<rdfs:label xml:lang="en">Diet</rdfs:label>
-		
-	</owl:Class>
-	
-	<owl:Class rdf:ID="Allergy">		
-		<rdfs:label xml:lang="en">Allergy</rdfs:label>
-		
-		<rdfs:seeAlso rdf:resource="&Person_SH_Ontology;Allergy"/>
-	</owl:Class>
-	
-	<owl:Class rdf:ID="BodyOrgan">		
-		<rdfs:label xml:lang="en">Body Organ</rdfs:label>
-		
-	</owl:Class>
-	
-	 <owl:Class rdf:ID="Nutrient">		
-		<rdfs:label xml:lang="en">Nutrient</rdfs:label>
-		
-	</owl:Class>
-	
- 	<owl:Class rdf:ID="Season">		
-		<rdfs:label xml:lang="en">Season</rdfs:label>
-		<rdfs:seeAlso rdf:resource="&sweet_season;Season"/>			
-	</owl:Class>
-	
-	<owl:Class rdf:ID="Color">		
-		<rdfs:label xml:lang="en">Color</rdfs:label>
-	</owl:Class>	
-    
-    <!-- ################################################ PROPERTIES ############################################################################ -->
- 
-	<owl:ObjectProperty rdf:ID="hasSeason">
-  		<rdfs:domain rdf:resource="#Food"/>
- 		<rdfs:range  rdf:resource="#Season"/>
-		<rdfs:label xml:lang="en">hasSeason</rdfs:label>
-	</owl:ObjectProperty>
-	
-	<owl:ObjectProperty rdf:ID="hasColor">
-  		<rdfs:domain rdf:resource="#Food"/>
- 		<rdfs:range  rdf:resource="#Color"/>
-		<rdfs:label xml:lang="en">hasColor</rdfs:label>
-	</owl:ObjectProperty>
-	
-	<owl:ObjectProperty rdf:ID="isGoodFor">
-  		<rdfs:domain rdf:resource="#BodyOrgan"/>
- 		<rdfs:range  rdf:resource="#Food"/>
-		<rdfs:label xml:lang="en">isGoodFor</rdfs:label>
-	</owl:ObjectProperty>
-	
-	<owl:ObjectProperty rdf:ID="isRecommendedFor">
-  		<rdfs:domain rdf:resource="#Food"/>
-		<rdfs:label xml:lang="en">isRecommendedFor</rdfs:label>
-	</owl:ObjectProperty>
-	
-	<owl:ObjectProperty rdf:ID="affectsOn">
-  		<rdfs:range  rdf:resource="#Emotion"/>
-		<rdfs:label xml:lang="en">affectsOn</rdfs:label>
-	</owl:ObjectProperty>
-	
-	<owl:ObjectProperty rdf:ID="hasNutrient">
-  		<rdfs:domain rdf:resource="#Food"/>
- 		<rdfs:range  rdf:resource="#Nutrient"/>
-		<rdfs:label xml:lang="en">hasNutrient</rdfs:label>
-	</owl:ObjectProperty>
-	
-	<owl:ObjectProperty rdf:ID="toAvoid">
-  		<rdfs:domain rdf:resource="#Food"/>
- 		<rdfs:range  rdf:resource="#Disease"/>
-		<rdfs:label xml:lang="en">toAvoid</rdfs:label>
-	</owl:ObjectProperty>
-		
-	<!-- ################################################ FOOD ############################################################################ -->
-	
-	<owl:Class rdf:ID="Fruit">		
-		<rdfs:label xml:lang="en">Fruit</rdfs:label>
-		<rdfs:subClassOf rdf:resource="#Food"/>
-		<owl:equivalentClass rdf:resource="&food_smart_product;Fruit"/>
-	</owl:Class>
-	
-	<owl:Class rdf:ID="Vegetable">		
-		<rdfs:label xml:lang="en">Vegetable</rdfs:label>
-		<rdfs:subClassOf rdf:resource="#Food"/>
-		<owl:equivalentClass rdf:resource="&food_smart_product;Vegetable"/>
-	</owl:Class>	
-	
-	<owl:Class rdf:ID="Bread">		
-		<rdfs:label xml:lang="en">Bread</rdfs:label>
-		<rdfs:subClassOf rdf:resource="#Food"/>
-		<owl:equivalentClass rdf:resource="&food_smart_product;Bread"/>
-	</owl:Class>	
-	
-	<owl:Class rdf:ID="Nuts">		
-		<rdfs:label xml:lang="en">Nuts</rdfs:label>
-		<rdfs:subClassOf rdf:resource="#Food"/>
-		<owl:equivalentClass rdf:resource="&food_smart_product;Nuts"/>
-	</owl:Class>
-		
-	<owl:Class rdf:ID="Meat">		
-		<rdfs:label xml:lang="en">Meat</rdfs:label>
-		<rdfs:subClassOf rdf:resource="#Food"/>
-		<owl:equivalentClass rdf:resource="&food_smart_product;Meat"/>
-	</owl:Class>
-	
-	<owl:Class rdf:ID="Poultry">		
-		<rdfs:label xml:lang="en">Poultry</rdfs:label>
-		<rdfs:subClassOf rdf:resource="#Food"/>
-		<owl:equivalentClass rdf:resource="&food_smart_product;Poultry"/>
-	</owl:Class>
-	
-	<owl:Class rdf:ID="Fish">		
-		<rdfs:label xml:lang="en">Fish</rdfs:label>
-		<rdfs:subClassOf rdf:resource="#Food"/>
-		<owl:equivalentClass rdf:resource="&food_smart_product;Fish"/>
-	</owl:Class>
-	
-	<owl:Class rdf:ID="ShellFish">		
-		<rdfs:label xml:lang="en">ShellFish</rdfs:label>
-		<rdfs:subClassOf rdf:resource="#Food"/>	
-		<owl:equivalentClass rdf:resource="&food_smart_product;Shellfish"/>
-	</owl:Class>
+	</owl:Class> 		
 	
 	<owl:Class rdf:ID="Herb">		
 		<rdfs:label xml:lang="en">Herb</rdfs:label>
 		<rdfs:subClassOf rdf:resource="#Food"/>		
-	</owl:Class>
+	</owl:Class> 
 	
-	<owl:Class rdf:ID="Cheese">		
-		<rdfs:label xml:lang="en">Cheese</rdfs:label>
-		<rdfs:subClassOf rdf:resource="#Food"/>	
-		<owl:equivalentClass rdf:resource="&food_smart_product;Cheese"/>	
-	</owl:Class>	
+	
+  
+	
 	
 </rdf:RDF>

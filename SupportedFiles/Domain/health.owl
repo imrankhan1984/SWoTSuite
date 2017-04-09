@@ -24,14 +24,8 @@
  
  	<owl:Class rdf:ID="Symptom">		
 		<rdfs:label xml:lang="en">Symptom</rdfs:label>
-		<rdfs:label xml:lang="fr">Symptome</rdfs:label>
-
 	</owl:Class>
- 
- 	<owl:DatatypeProperty rdf:ID="hasSymptom">
-		<rdfs:label xml:lang="en">hasSymptom</rdfs:label>
 
-	</owl:DatatypeProperty>
  
 </rdf:RDF>
 

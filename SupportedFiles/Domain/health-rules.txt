@@ -17,8 +17,6 @@
 # ADD (?measurement m3:hasUnit m3:MmolPerLiter) for m3:Cholesterol
 # ADD (?measurement m3:hasUnit m3:GramPerLiter) for m3:BloodGlucose
 
-# check with M3 converter
-
 # Number of rules = 25 rules (16 real health rules with references + 9 rules for scenarios to improve with real rules)
 
 ################################################################ BODY TEMPERATURE RULES ######################################################################
