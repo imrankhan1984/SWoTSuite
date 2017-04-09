@@ -433,13 +433,5 @@
 		<rdfs:subClassOf rdf:resource="#Nutrient"/>
 	</owl:Class>
 	
-	<!-- ################################################ Emotion ############################################################################ -->
-	 
-	 <owl:Class rdf:ID="Emotion">		
-		<rdfs:label xml:lang="en">Emotion</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
-		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000001"/>
-		<owl:equivalentClass rdf:resource="&emoca;Emotion"/>
-	</owl:Class>  
 	
 </rdf:RDF>
