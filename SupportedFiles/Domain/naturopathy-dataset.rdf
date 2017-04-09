@@ -2460,7 +2460,6 @@ This work is supported by the Com4Innov platform of the Pole SCS and DataTweet (
         <naturopathy:hasColor rdf:resource="Brown"/>
     </naturopathy:Nuts>
     
-  	 <!-- ################################################ Measurement result ############################################################################ -->
     
     <naturopathy:Disease rdf:about="HichCholesterol">
 		<rdfs:label xml:lang="en">Hich Cholesterol</rdfs:label>
