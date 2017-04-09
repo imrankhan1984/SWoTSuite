@@ -200,13 +200,7 @@
 		<rdfs:seeAlso rdf:resource="&Person_SH_Ontology;hasAllergy"/>
 	</owl:DatatypeProperty>
 	
-	<owl:ObjectProperty rdf:ID="hasEmotion">
-  		<rdfs:domain rdf:resource="#Person"/>
- 		<rdfs:range  rdf:resource="#Emotion"/>
-		<rdfs:label xml:lang="en">hasEmotion</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
-	</owl:ObjectProperty>
-	  	
+ 	
 	  	<!-- ################################################ CONCEPTS ############################################################################ -->
 	    
 	<owl:Class rdf:ID="Food">		
@@ -217,7 +211,6 @@
 	
 	<owl:Class rdf:ID="Disease">		
 		<rdfs:label xml:lang="en">Disease, ailments</rdfs:label>
-		<rdfs:label xml:lang="fr">Affections, maladie, mal</rdfs:label>
 		<rdfs:comment xml:lang="en"></rdfs:comment>
 		<rdfs:seeAlso rdf:resource="&OntoReaChir;Disease"/>
 		<rdfs:seeAlso rdf:resource="&Person_SH_Ontology;Disease"/>
@@ -322,7 +315,6 @@
 	
 	<owl:Class rdf:ID="Bread">		
 		<rdfs:label xml:lang="en">Bread</rdfs:label>
-		<rdfs:label xml:lang="fr">Pain</rdfs:label>
 		<rdfs:comment xml:lang="en"></rdfs:comment>
 		<rdfs:subClassOf rdf:resource="#Food"/>
 		<owl:equivalentClass rdf:resource="&food_smart_product;Bread"/>
@@ -344,7 +336,6 @@
 	
 	<owl:Class rdf:ID="Poultry">		
 		<rdfs:label xml:lang="en">Poultry</rdfs:label>
-		<rdfs:label xml:lang="fr">Volaille</rdfs:label>
 		<rdfs:comment xml:lang="en"></rdfs:comment>
 		<rdfs:subClassOf rdf:resource="#Food"/>
 		<owl:equivalentClass rdf:resource="&food_smart_product;Poultry"/>
@@ -352,7 +343,6 @@
 	
 	<owl:Class rdf:ID="Fish">		
 		<rdfs:label xml:lang="en">Fish</rdfs:label>
-		<rdfs:label xml:lang="fr">Poisson</rdfs:label>
 		<rdfs:comment xml:lang="en"></rdfs:comment>
 		<rdfs:subClassOf rdf:resource="#Food"/>
 		<owl:equivalentClass rdf:resource="&food_smart_product;Fish"/>
@@ -360,7 +350,6 @@
 	
 	<owl:Class rdf:ID="ShellFish">		
 		<rdfs:label xml:lang="en">ShellFish</rdfs:label>
-		<rdfs:label xml:lang="fr">Crustaces, coquillages, fruits de mer</rdfs:label>
 		<rdfs:comment xml:lang="en"></rdfs:comment>
 		<rdfs:subClassOf rdf:resource="#Food"/>	
 		<owl:equivalentClass rdf:resource="&food_smart_product;Shellfish"/>
@@ -379,31 +368,6 @@
 		<owl:equivalentClass rdf:resource="&food_smart_product;Cheese"/>	
 	</owl:Class>
 	
-	<!-- ################################################ NUTRIENT ############################################################################ -->
-    
-     <owl:Class rdf:ID="Vitamin">		
-		<rdfs:label xml:lang="en">Vitamin</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
-        <rdfs:subClassOf rdf:resource="#Nutrient"/>
-	</owl:Class>
-	
-	 <owl:Class rdf:ID="Omega">		
-		<rdfs:label xml:lang="en">Omega</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
-		<rdfs:subClassOf rdf:resource="#Nutrient"/>
-	</owl:Class>
-	
-	 <owl:Class rdf:ID="Mineral">		
-		<rdfs:label xml:lang="en">Mineral</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
-		<rdfs:subClassOf rdf:resource="#Nutrient"/>
-	</owl:Class>
-	
-	<owl:Class rdf:ID="OligoElement">		
-		<rdfs:label xml:lang="en">OligoElement</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
-		<rdfs:subClassOf rdf:resource="#Nutrient"/>
-	</owl:Class>
-	
+		
 	
 </rdf:RDF>
