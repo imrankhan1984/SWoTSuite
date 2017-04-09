@@ -67,25 +67,25 @@
 
 	<naturopathy:Season rdf:about="Winter">		
 		<rdfs:label xml:lang="en">Winter</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&sweet_season;Winter"/>
 	</naturopathy:Season>
 	
 	<naturopathy:Season rdf:about="Spring">		
 		<rdfs:label xml:lang="en">Spring</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&sweet_season;Spring"/>
 	</naturopathy:Season>
 	
 	<naturopathy:Season rdf:about="Summer">		
 		<rdfs:label xml:lang="en">Summer</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&sweet_season;Summer"/>
 	</naturopathy:Season>
 
 	<naturopathy:Season rdf:about="Autumn">		
 		<rdfs:label xml:lang="en">Autumn</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&sweet_season;Autumn"/>
 	</naturopathy:Season>
 	
@@ -106,12 +106,12 @@
 		<m3:hasRecommendation rdf:resource="Happiness"/>
 		<m3:hasRecommendation rdf:resource="Joy"/>
 		<m3:hasRecommendation rdf:resource="Shame"/>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Color>
 	
 	<naturopathy:Color rdf:about="Green">		
 		<rdfs:label xml:lang="en">Green</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<dc:description xml:lang="en">A color affects on a emotion. Paper: Mapping Emotion to color [Nijdam et al. 2009]. See section Von Goethe, Claudia Cortes, Shirley Willet, Wheel Pro and Naz Kaya color summary.</dc:description>
 		<m3:hasRecommendation rdf:resource="Calm"/>
 		<m3:hasRecommendation rdf:resource="Hope"/>
@@ -121,7 +121,7 @@
 
 	<naturopathy:Color rdf:about="Blue">		
 		<rdfs:label xml:lang="en">Blue</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<dc:description xml:lang="en">A color affects on a emotion. Paper: Mapping Emotion to color [Nijdam et al. 2009]. See section Wheel Pro, Von Goethe, Claudia Cortes, Shirley Willet and Naz Kaya color summary.</dc:description>
 		<m3:hasRecommendation rdf:resource="Calm"/>
 		<m3:hasRecommendation rdf:resource="Sadness"/>
@@ -141,7 +141,7 @@
 	
 	<naturopathy:Color rdf:about="Black">		
 		<rdfs:label xml:lang="en">Black</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<dc:description xml:lang="en">A color affects on a emotion. Paper: Mapping Emotion to color [Nijdam et al. 2009]. See section Wheel Pro and Naz Kaya color summary.</dc:description>
 		<m3:hasRecommendation rdf:resource="Depressed"/>
 		<m3:hasRecommendation rdf:resource="Fear"/>
@@ -150,14 +150,14 @@
 	
 	<naturopathy:Color rdf:about="White">		
 		<rdfs:label xml:lang="en">White</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<dc:description xml:lang="en">A color affects on a emotion. Paper: Mapping Emotion to color [Nijdam et al. 2009]. See section Naz Kaya color summary.</dc:description>
 		<m3:hasRecommendation rdf:resource="Calm"/>
 	</naturopathy:Color>
 	
 	<naturopathy:Color rdf:about="Purple">		
 		<rdfs:label xml:lang="en">Purple</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<dc:description xml:lang="en">A color affects on a emotion. Paper: Mapping Emotion to color [Nijdam et al. 2009]. See section Wheel Pro, Shirley Willet, Naz Kaya color summary.</dc:description>
 		<m3:hasRecommendation rdf:resource="Tired"/>
 		<m3:hasRecommendation rdf:resource="Power"/>
@@ -166,7 +166,7 @@
 	
 	<naturopathy:Color rdf:about="Red">		
 		<rdfs:label xml:lang="en">Red</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<dc:description xml:lang="en">A color affects on a emotion. Paper: Mapping Emotion to color [Nijdam et al. 2009]. See section Wheel Pro, Claudia Cortes, Naz Kaya, Shirley Willet color summary.</dc:description>
 		<m3:hasRecommendation rdf:resource="Anger"/>
 		<m3:hasRecommendation rdf:resource="Love"/>		
@@ -174,29 +174,29 @@
 	
 	<naturopathy:Color rdf:about="Pink">		
 		<rdfs:label xml:lang="en">Pink</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Color>
 	
 	<naturopathy:Color rdf:about="Brown">		
 		<rdfs:label xml:lang="en">Brown</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Color>
 	
 	<!-- ################################################ naturopathy:Disease ############################################################################ -->
 
 	<naturopathy:Disease rdf:about="Headache">		
 		<rdfs:label xml:lang="en">Headache</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	<naturopathy:Disease rdf:about="Cough">		
 		<rdfs:label xml:lang="en">Cough</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	<naturopathy:Disease rdf:about="Appendictis">		
 		<rdfs:label xml:lang="en">Appendictis</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	<naturopathy:Disease rdf:about="Emphysema">		
@@ -211,62 +211,62 @@
 	
 	<naturopathy:Disease rdf:about="Psychic_disease">		
 		<rdfs:label xml:lang="en">Psychic disease</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	<naturopathy:Disease rdf:about="Ulcer">		
 		<rdfs:label xml:lang="en">Ulcer</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	<naturopathy:Disease rdf:about="Urinary_incontinence">		
 		<rdfs:label xml:lang="en">Urinary incontinence</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	<naturopathy:Disease rdf:about="Stroke">		
 		<rdfs:label xml:lang="en">Stroke</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	<naturopathy:Disease rdf:about="Acne">		
 		<rdfs:label xml:lang="en">Acne</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	<naturopathy:Disease rdf:about="Pimple">		
 		<rdfs:label xml:lang="en">Pimple</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	<naturopathy:Disease rdf:about="Infertility">		
 		<rdfs:label xml:lang="en">Infertility</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	<naturopathy:Disease rdf:about="Toothache">		
 		<rdfs:label xml:lang="en">Toothache</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	<naturopathy:Disease rdf:about="WeightLoss">		
 		<rdfs:label xml:lang="en">Weight loss</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	<naturopathy:Disease rdf:about="BadBreath">		
 		<rdfs:label xml:lang="en">Bad breath</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	<naturopathy:Disease rdf:about="Digestion">		
 		<rdfs:label xml:lang="en">Digestion, ingestion or stomach pain</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	<naturopathy:Disease rdf:about="Hypoglycemie">		
 		<rdfs:label xml:lang="en">Hypoglycemie</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdf:type rdf:resource="&OntoReaChir;Hypoglycemie"/>
 	</naturopathy:Disease>
 	
@@ -286,17 +286,17 @@
 	
 	<naturopathy:Mineral rdf:about="Potassium">		
 		<rdfs:label xml:lang="en">Potassium</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Mineral> 
 	
 	<naturopathy:Mineral rdf:about="Sodium">		
 		<rdfs:label xml:lang="en">Sodium</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Mineral> 
 	
 	<naturopathy:Mineral rdf:about="Calcium">		
 		<rdfs:label xml:lang="en">Calcium</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<naturopathy:isGoodFor rdf:resource="Bone"/>
 		<naturopathy:toAvoid rdf:resource="AllergyToLactose"/>
 	</naturopathy:Mineral> 
@@ -305,7 +305,7 @@
 	
 	<naturopathy:OligoElement rdf:about="Zinc">		
 		<rdfs:label xml:lang="en">Zinc</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<m3:hasRecommendation rdf:resource="Cold"/>
         <m3:hasRecommendation rdf:resource="Flu"/>
         <m3:hasRecommendation rdf:resource="Skin"/>
@@ -314,61 +314,61 @@
 	<naturopathy:OligoElement rdf:about="Iron">		
 		<rdfs:label xml:lang="en">Iron</rdfs:label>
 		<rdfs:label xml:lang="en">Fer</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:OligoElement>
 	
 	<naturopathy:OligoElement rdf:about="Copper">		
 		<rdfs:label xml:lang="en">Copper</rdfs:label>
 		<rdfs:label xml:lang="en">Cuivre</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:OligoElement>
 	
 	<!-- Vitamin -->
 
 	<naturopathy:Vitamin rdf:about="VitaminA">		
 		<rdfs:label xml:lang="en">Vitamin A</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Vitamin>
 	
 	<naturopathy:Vitamin rdf:about="VitaminB">		
 		<rdfs:label xml:lang="en">Vitamin B</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<m3:hasRecommendation rdf:resource="Stress"/>
 		<m3:hasRecommendation rdf:resource="Sadness"/>
 	</naturopathy:Vitamin>
 		    
     <naturopathy:Vitamin rdf:about="VitaminC">		
 		<rdfs:label xml:lang="en">Vitamin C</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<m3:hasRecommendation rdf:resource="Cold"/>
 		<m3:hasRecommendation rdf:resource="Flu"/>
 	</naturopathy:Vitamin>
 	
 	<naturopathy:Vitamin rdf:about="VitaminD">		
 		<rdfs:label xml:lang="en">Vitamin D</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Vitamin>
 	
 	<naturopathy:Vitamin rdf:about="VitaminE">		
 		<rdfs:label xml:lang="en">Vitamin E</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Vitamin>	
 	
 	<naturopathy:Vitamin rdf:about="VitaminK">		
 		<rdfs:label xml:lang="en">Vitamin K</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Vitamin>
 	
 	 <naturopathy:Vitamin rdf:about="VitaminP">		
 		<rdfs:label xml:lang="en">Vitamin P</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Vitamin>
 	
 	<!-- Omega -->
 	
 	<naturopathy:Omega rdf:about="Omega3">		
 		<rdfs:label xml:lang="en">Omega 3</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<m3:hasRecommendation rdf:resource="Depression"/>
 		<m3:hasRecommendation rdf:resource="Cold"/>
 		<m3:hasRecommendation rdf:resource="Flu"/>
@@ -377,14 +377,14 @@
 	
 	<naturopathy:Omega rdf:about="Omega6">		
 		<rdfs:label xml:lang="en">Omega 6</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<m3:hasRecommendation rdf:resource="Cold"/>
 		<m3:hasRecommendation rdf:resource="Flu"/>
 	</naturopathy:Omega>
 	
 	<naturopathy:Nutrient rdf:about="Protein">		
 		<rdfs:label xml:lang="en">Protein</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<m3:hasRecommendation rdf:resource="Muscle"/>
 		<m3:hasRecommendation rdf:resource="Ligament"/>
 		<m3:hasRecommendation rdf:resource="Sport"/>
@@ -392,27 +392,27 @@
 		
 	<naturopathy:Nutrient rdf:about="FattyAcid">		
 		<rdfs:label xml:lang="en">Fatty Acid</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Nutrient>
 		
 	 <naturopathy:Nutrient rdf:about="Fiber">		
 		<rdfs:label xml:lang="en">Fiber</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Nutrient>
 	
 	 <naturopathy:Nutrient rdf:about="Fat">		
 		<rdfs:label xml:lang="en">Fat</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Nutrient>
 	
 	<naturopathy:Nutrient rdf:about="Carbohydrate">		
 		<rdfs:label xml:lang="en">Carbohydrate</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Nutrient>
 	
 	<naturopathy:Nutrient rdf:about="Lactose">		
 		<rdfs:label xml:lang="en">Lactose</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<naturopathy:toAvoid rdf:resource="AllergyToLactose"/>
 	</naturopathy:Nutrient>
 	
@@ -420,7 +420,7 @@
 			
 	<naturopathy:Emotion rdf:about="Sadness">		
 		<rdfs:label xml:lang="en">Sadness</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000056"/>
 		<rdf:type rdf:resource="&emoca;Sadness"/>	
 		<dc:description xml:lang="en">A color affects on a emotion. Paper: Mapping Emotion to color [Nijdam et al. 2009]. See section Wheel Pro, Von Goethe, Claudia Cortes and Shirley Willet summary.</dc:description>
@@ -428,75 +428,75 @@
 	
 	<naturopathy:Emotion rdf:about="Hope">		
 		<rdfs:label xml:lang="en">Hope, hopeful</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000177"/>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Tired">		
 		<rdfs:label xml:lang="en">Tired, Fatigue</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000080"/>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Comfortable">		
 		<rdfs:label xml:lang="en">Comfortable, feeling at ease</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000107"/>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Calm">		
 		<rdfs:label xml:lang="en">Calme</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000114"/>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Inspiration">		
 		<rdfs:label xml:lang="en">Inspiration</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000178"/>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Anger">		
 		<rdfs:label xml:lang="en">Anger, Agressive</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000009"/>
 		<rdf:type rdf:resource="&emoca;Anger"/>	
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Irritation">		
 		<rdfs:label xml:lang="en">Irritation</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000011"/>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Grief">		
 		<rdfs:label xml:lang="en">Grief</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_MFOEM_000016"/>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Contempt">		
 		<rdfs:label xml:lang="en">Contempt</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000018"/>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Disgust">		
 		<rdfs:label xml:lang="en">Disgust</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000019"/>
 		<rdf:type rdf:resource="&emoca;Disgust"/>	
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Hate">		
 		<rdfs:label xml:lang="en">Hate</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000024"/>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Joy">		
 		<rdfs:label xml:lang="en">Joy</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000034"/>
 		<rdf:type rdf:resource="&emoca;Joy"/>
 		<dc:description xml:lang="en">A color affects on a emotion. Paper: Mapping Emotion to color [Nijdam et al. 2009]. See section Wheel Pro, Von Goethe, Claudia Cortes and Shirley Willet summary.</dc:description>	
@@ -504,13 +504,13 @@
 	
 	<naturopathy:Emotion rdf:about="Jealousy">		
 		<rdfs:label xml:lang="en">Jealousy</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000025"/>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Fear">		
 		<rdfs:label xml:lang="en">Fear</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000026"/>
 		<rdf:type rdf:resource="&emoca;Fear"/>	
 		<dc:description xml:lang="en">A color affects on a emotion. Paper: Mapping Emotion to color [Nijdam et al. 2009]. See section Wheel Pro, Von Goethe, Claudia Cortes and Shirley Willet summary.</dc:description>
@@ -518,123 +518,123 @@
 	
 	<naturopathy:Emotion rdf:about="Confident">		
 		<rdfs:label xml:lang="en">Confident</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000156"/>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Anxiety">		
 		<rdfs:label xml:lang="en">Anxiety</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000028"/>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Stress">		
 		<rdfs:label xml:lang="en">Stress</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000029"/>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Despair">		
 		<rdfs:label xml:lang="en">Despair</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000030"/>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Surprise">		
 		<rdfs:label xml:lang="en">Surprise</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000032"/>
 		<rdf:type rdf:resource="&emoca;Surprise"/>		
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Interest">		
 		<rdfs:label xml:lang="en">Interest</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000033"/>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Pleasure">		
 		<rdfs:label xml:lang="en">Pleasure</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000035"/>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Pride">		
 		<rdfs:label xml:lang="en">Pride</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000041"/>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Teasing">		
 		<rdfs:label xml:lang="en">Teasing</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Happiness">		
 		<rdfs:label xml:lang="en">Happiness</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000042"/>
 		<dc:description xml:lang="en">A color affects on a emotion. Paper: Mapping Emotion to color [Nijdam et al. 2009]. See section Wheel Pro, Von Goethe, Claudia Cortes and Shirley Willet summary.</dc:description>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Love">		
 		<rdfs:label xml:lang="en">Love</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000048"/>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Disappointment">		
 		<rdfs:label xml:lang="en">Disappointment</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000051"/>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Compassion">		
 		<rdfs:label xml:lang="en">Compassion</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000052"/>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Guilt">		
 		<rdfs:label xml:lang="en">Guilt</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000053"/>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Embarrassment">		
 		<rdfs:label xml:lang="en">Embarrassment</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000054"/>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Shame">		
 		<rdfs:label xml:lang="en">Shame</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000055"/>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Boredom">		
 		<rdfs:label xml:lang="en">Boredom</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000166"/>
 		<dc:description xml:lang="en">A color affects on a emotion. Paper: Mapping Emotion to color [Nijdam et al. 2009]. See section Wheel Pro, Von Goethe, Claudia Cortes and Shirley Willet summary.</dc:description>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Curiosity">		
 		<rdfs:label xml:lang="en">Curiosity</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000167"/>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Concern">		
 		<rdfs:label xml:lang="en">Concern</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000168"/>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Amusement">		
 		<rdfs:label xml:lang="en">Amusement</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000044"/>
 	</naturopathy:Emotion>
 	
@@ -646,56 +646,56 @@
 	
 	<naturopathy:Emotion rdf:about="Worry">		
 		<rdfs:label xml:lang="en">Worry</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000171"/>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Confusion">		
 		<rdfs:label xml:lang="en">Confusion</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000173"/>
 		<dc:description xml:lang="en">A color affects on a emotion. Paper: Mapping Emotion to color [Nijdam et al. 2009]. See section Wheel Pro, Von Goethe, Claudia Cortes and Shirley Willet summary.</dc:description>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Greed">		
 		<rdfs:label xml:lang="en">Greed</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Power">		
 		<rdfs:label xml:lang="en">Power</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Trust">		
 		<rdfs:label xml:lang="en">Trust</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Thirsty">		
 		<rdfs:label xml:lang="en">Thirsty</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Depressed">		
 		<rdfs:label xml:lang="en">Depressed</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<dc:description xml:lang="en">A color affects on a emotion. Paper: Mapping Emotion to color [Nijdam et al. 2009]. See section Wheel Pro, Von Goethe, Claudia Cortes and Shirley Willet summary.</dc:description>
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Hungry">		
 		<rdfs:label xml:lang="en">Hungry</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Painful">		
 		<rdfs:label xml:lang="en">Painful</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Emotion>
 	
 	<naturopathy:Emotion rdf:about="Expectant">		
 		<rdfs:label xml:lang="en">Expectant</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&obo;MFOEM_000175"/>
 	</naturopathy:Emotion>
 	
@@ -703,7 +703,7 @@
 	
 	<naturopathy:Disease rdf:about="Hypertension">		
 		<rdfs:label xml:lang="en">Hypertension</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdf:type rdf:resource="&OntoReaChir;HypertensionArterielle"/>
 		<rdf:type rdf:resource="&Person_SH_Ontology;Arterial_hypertension"/>
 	</naturopathy:Disease>
@@ -715,12 +715,12 @@
 	
 	<naturopathy:Disease rdf:about="sclerosis">		
 		<rdfs:label xml:lang="en">Sclerosis</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	<naturopathy:Disease rdf:about="Osteoporosis">		
 		<rdfs:label xml:lang="en">Osteoporosis</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	<naturopathy:Disease rdf:about="HeartAttack">		
@@ -730,108 +730,108 @@
 	
 	<naturopathy:Disease rdf:about="Hypotension">		
 		<rdfs:label xml:lang="en">Hypotension</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	<naturopathy:Disease rdf:about="Diabetes">		
 		<rdfs:label xml:lang="en">Diabetes</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&Person_SH_Ontology;Diabetes"/>
 	</naturopathy:Disease>
 	
 	<naturopathy:Disease rdf:about="Rheumatism">		
 		<rdfs:label xml:lang="en">Rheumatism</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 		<rdfs:seeAlso rdf:resource="&Person_SH_Ontology;Rheumatism"/>
 	</naturopathy:Disease>
 	
 	<naturopathy:Disease rdf:about="Overweight">		
 		<rdfs:label xml:lang="en">Overweight</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	<naturopathy:Disease rdf:about="Cold">		
 		<rdfs:label xml:lang="en">Cold</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	
 	
 	<naturopathy:Disease rdf:about="Flu">		
 		<rdfs:label xml:lang="en">Flu/Influenza</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	<naturopathy:Disease rdf:about="Asthma">		
 		<rdfs:label xml:lang="en">Asthma</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	<naturopathy:Disease rdf:about="Cancer">		
 		<rdfs:label xml:lang="en">Cancer</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	<naturopathy:Disease rdf:about="Parkinson">		
 		<rdfs:label xml:lang="en">Parkinson</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	<naturopathy:Disease rdf:about="Cataract">		
 		<rdfs:label xml:lang="en">Cataract</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	<naturopathy:Disease rdf:about="Cholesterol">		
 		<rdfs:label xml:lang="en">Cholesterol</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	<naturopathy:Disease rdf:about="Insomnia">		
 		<rdfs:label xml:lang="en">Insomnia</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	 <naturopathy:Disease rdf:about="Asthenia">		
 		<rdfs:label xml:lang="en">Asthenia</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	 <naturopathy:Disease rdf:about="KidneyStone">		
 		<rdfs:label xml:lang="en">KidneyStone</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	<naturopathy:Disease rdf:about="Depression">		
 		<rdfs:label xml:lang="en">Depression</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Disease>
 	
 	<!-- Diet -->
 	    
 	<naturopathy:Diet rdf:about="Sport">		
 		<rdfs:label xml:lang="en">Sport</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Diet>
 	
 	<naturopathy:Diet rdf:about="Menaupause">		
 		<rdfs:label xml:lang="en">Menaupause</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Diet>
 	
 	<naturopathy:Diet rdf:about="Pregnant">		
 		<rdfs:label xml:lang="en">Pregnant</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Diet>
 	
 	<naturopathy:Diet rdf:about="VeganDiet">		
 		<rdfs:label xml:lang="en">Vegan Diet</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Diet>
 	
 	<naturopathy:Diet rdf:about="VegetarianDiet">		
 		<rdfs:label xml:lang="en">Vegetarian Diet</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:Diet>
 	
 	<!-- Allergy -->
@@ -871,68 +871,68 @@
 
 	<naturopathy:BodyOrgan rdf:about="Brain">		
 		<rdfs:label xml:lang="en">Brain</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:BodyOrgan>
 	
 	<naturopathy:BodyOrgan rdf:about="Stomach">		
 		<rdfs:label xml:lang="en">Stomach</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:BodyOrgan>
 	
 	<naturopathy:BodyOrgan rdf:about="Eye">		
 		<rdfs:label xml:lang="en">Eye</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:BodyOrgan>
 	
 	<naturopathy:BodyOrgan rdf:about="Ear">		
 		<rdfs:label xml:lang="en">Ear, hearing</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:BodyOrgan>
 	
 	<naturopathy:BodyOrgan rdf:about="Bone">		
 		<rdfs:label xml:lang="en">Bone</rdfs:label>
 		<rdfs:label xml:lang="en">Os</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:BodyOrgan>
 	
 	<naturopathy:BodyOrgan rdf:about="Muscle">		
 		<rdfs:label xml:lang="en">Muscle</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:BodyOrgan>
 	
 	<naturopathy:BodyOrgan rdf:about="Ligament">		
 		<rdfs:label xml:lang="en">Ligament</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:BodyOrgan>
 	
 	<naturopathy:BodyOrgan rdf:about="Bladder">		
 		<rdfs:label xml:lang="en">Bladder</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:BodyOrgan>
 	
 	<naturopathy:BodyOrgan rdf:about="Heart">		
 		<rdfs:label xml:lang="en">Heart</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:BodyOrgan>
 	
 	<naturopathy:BodyOrgan rdf:about="Liver">		
 		<rdfs:label xml:lang="en">Liver</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:BodyOrgan>
 	
 	<naturopathy:BodyOrgan rdf:about="Hair">		
 		<rdfs:label xml:lang="en">Hair</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:BodyOrgan>
 	
 	<naturopathy:BodyOrgan rdf:about="Nail">		
 		<rdfs:label xml:lang="en">Nail</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:BodyOrgan>
 	
 	<naturopathy:BodyOrgan rdf:about="Skin">		
 		<rdfs:label xml:lang="en">Skin</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</naturopathy:BodyOrgan>
     
     <!-- food -->

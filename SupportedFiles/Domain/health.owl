@@ -25,12 +25,12 @@
  	<owl:Class rdf:ID="Symptom">		
 		<rdfs:label xml:lang="en">Symptom</rdfs:label>
 		<rdfs:label xml:lang="fr">Symptome</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</owl:Class>
  
  	<owl:DatatypeProperty rdf:ID="hasSymptom">
 		<rdfs:label xml:lang="en">hasSymptom</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
+
 	</owl:DatatypeProperty>
  
 </rdf:RDF>

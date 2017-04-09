@@ -48,37 +48,25 @@
 	  
 	 <health:Symptom rdf:about="CriticallyHighFever">		
 		<rdfs:label xml:lang="en">CriticallyHighFever</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
 	</health:Symptom>
 	
 	<health:Symptom rdf:about="HighFever">		
 		<rdfs:label xml:lang="en">HighFever</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
 	</health:Symptom>
 	
 	<health:Symptom rdf:about="NormalBodyTemperature">		
 		<rdfs:label xml:lang="en">NormalBodyTemperature</rdfs:label>
-		<rdfs:label xml:lang="fr">Temperature du corps humain normale</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
 	</health:Symptom>
 	
 	<health:Symptom rdf:about="MildHypothermia">		
 		<rdfs:label xml:lang="en">MildHypothermia</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
 	</health:Symptom>
 	
 	<health:Symptom rdf:about="ModerateHypothermia">		
 		<rdfs:label xml:lang="en">ModerateHypothermia</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
 	</health:Symptom>
 	
 	<health:Symptom rdf:about="SevereHypothermia">		
 		<rdfs:label xml:lang="en">SevereHypothermia</rdfs:label>
-		<rdfs:comment xml:lang="en"></rdfs:comment>
 	</health:Symptom>
-	
-	
-
-    
-    	
 </rdf:RDF>
