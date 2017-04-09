@@ -17,6 +17,3 @@
               (?sensor m3:produces ?measurementUri)
               (?sensor m3:observes m3:health)
 ]
-        
-
-   

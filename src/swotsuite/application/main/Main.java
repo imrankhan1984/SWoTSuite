@@ -12,13 +12,6 @@ import swotsuite.application.framework.VariableSparql;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 
-/**
- * @author : Pankesh Patel, Amelie Gyrard
- * 
- * SWoTSuite Framework is originated from M3 framework developed by Amelie Gyrard.
- * In collaboration with Insight/NUIG-DERI, Ireland. * 
- *   
- */
 
 public class Main { 
 	
@@ -83,7 +76,7 @@ public class Main {
 			GenericApplication generic_appli = new GenericApplication(model);
 
 			// STEP: SPECIFIC DOMAIN ONTOLOGIES AND DATASETS
-			//ReadFile.enrichJenaModelOntologyDataset(generic_appli.model, M3_ONTOLOGY);
+			ReadFile.enrichJenaModelOntologyDataset(generic_appli.model, M3_ONTOLOGY);
 			ReadFile.enrichJenaModelOntologyDataset(generic_appli.model, NATUROPATHY_ONTOLOGY);
 			ReadFile.enrichJenaModelOntologyDataset(generic_appli.model, NATUROPATHY_DATASET);
 		    ReadFile.enrichJenaModelOntologyDataset(generic_appli.model, HEALTH_ONTOLOGY);

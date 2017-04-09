@@ -85,7 +85,9 @@
         <m3:hasRecommendation rdf:resource="&health-dataset;HighFever"/>
     </naturopathy:Food> 
     
-    
+    	<owl:ObjectProperty rdf:ID="hasRecommendation">
+		<rdfs:label xml:lang="en">hasRecommendation</rdfs:label>
+	</owl:ObjectProperty>
    
     
      

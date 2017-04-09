@@ -145,9 +145,4 @@
 		<rdfs:label xml:lang="en">Herb</rdfs:label>
 		<rdfs:subClassOf rdf:resource="#Food"/>		
 	</owl:Class> 
-	
-	
-  
-	
-	
 </rdf:RDF>
