@@ -22,8 +22,7 @@ public class Main {
 		// Namespace for Ontologies
 		public static final String NAMESPACE_M3= "http://sensormeasurement.appspot.com/m3#";
 	
-	
-		// Domain Folder - contains domain-specific ontologies,  data sets, rules. 
+	   // Domain Folder - contains domain-specific ontologies,  data sets, rules. 
 		public static final String NATUROPATHY_ONTOLOGY = "./SupportedFiles/Domain/naturopathy.owl";
 		public static final String HEALTH_ONTOLOGY = "./SupportedFiles/Domain/health.owl";
 		public static final String NATUROPATHY_DATASET = "./SupportedFiles/Domain/naturopathy-dataset.rdf";
@@ -45,8 +44,6 @@ public class Main {
 	   
 	   
 	   public static void main(String[] args) {	
-		
-
 		try {
 
 			// STEP: LOAD RAW DATA (SENML/XML) in this tutorial
