@@ -9,16 +9,6 @@
 @prefix transport: http://sensormeasurement.appspot.com/ont/m3/transport#
 
 
-################################################################ TO DO, REMARKS ######################################################################
-# FUTURE VERSIONS, TO DO: handle units too
-# ADD (?measurement m3:hasUnit m3:BeatPerMinute) for m3:HeartBeat
-# ADD (?measurement m3:hasUnit m3:Percent) for m3:SPO2
-# ADD (?measurement m3:hasUnit m3:DegreeCelsius) for m3:BodyTemperature
-# ADD (?measurement m3:hasUnit m3:MmolPerLiter) for m3:Cholesterol
-# ADD (?measurement m3:hasUnit m3:GramPerLiter) for m3:BloodGlucose
-
-# Number of rules = 25 rules (16 real health rules with references + 9 rules for scenarios to improve with real rules)
-
 ################################################################ BODY TEMPERATURE RULES ######################################################################
 #Paper: An ontology based system for social networking for health application support [Obaid et al. 2013]
 #IF m3:BodyTemperature GREATER_THAN 39 m3:DegreeCelsius THEN CriticallyHighFever
@@ -42,47 +32,4 @@
               lessThan(?v,39.0)
               ->
               (?measurement rdf:type health-dataset:HighFever)
-]
-
-#Paper: An ontology based system for social networking for health application support [Obaid et al. 2013]
-#IF m3:BodyTemperature greaterThan 36 m3:DegreeCelsius AND lessThan 38 m3:DegreeCelsius THEN NormalFever
-[NormalBodyTemperature:
-              (?measurement rdf:type m3:BodyTemperature)
-              (?measurement m3:hasValue ?v)
-              greaterThan(?v,36.0)
-              lessThan(?v,38.0)
-              ->
-              (?measurement rdf:type health-dataset:NormalBodyTemperature)
-]
-
-# Paper: An ambient assisted living system for telemedicine with detection of symtoms [Jara et al. 2009]
-# IF m3:BodyTemperature lessThan 28 m3:DegreeCelsius THEN SevereHypothermia
-[SevereHypothermia:
-              (?measurement rdf:type m3:BodyTemperature)
-              (?measurement m3:hasValue ?v)
-              lessThan(?v,28)
-              ->
-              (?measurement rdf:type health-dataset:SevereHypothermia)
-]
-
-# Paper: An ambient assisted living system for telemedicine with detection of symtoms [Jara et al. 2009]
-# IF m3:BodyTemperature greaterThan 28 m3:DegreeCelsius AND lessThan 32 m3:DegreeCelsius THEN ModerateHypothermia
-[ModerateHypothermia: 
-              (?measurement rdf:type m3:BodyTemperature)
-              (?measurement m3:hasValue ?v)
-              greaterThan(?v,28)
-              lessThan(?v,32)
-              ->
-              (?measurement rdf:type health-dataset:ModerateHypothermia)
-]
-
-# Paper: An ambient assisted living system for telemedicine with detection of symtoms [Jara et al. 2009]
-# IF m3:BodyTemperature greaterThan 32 m3:DegreeCelsius AND lessThan 35 m3:DegreeCelsius THEN MildHypothermia
-[MildHypothermia: 
-              (?measurement rdf:type m3:BodyTemperature)
-              (?measurement m3:hasValue ?v)
-              greaterThan(?v,32)
-              lessThan(?v,35)
-              ->
-              (?measurement rdf:type health-dataset:MildHypothermia)
 ]
