@@ -2,10 +2,8 @@ package swotsuite.application.main;
 
 import java.io.FileWriter;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -142,6 +140,8 @@ public class Main {
 			Iterator<String> suggestionIterator = suggestion.iterator();
 			Iterator<String> deduceInfoIterator = deduceInfo.iterator();
 
+			
+//			Following code is used to store data to mysql
 			/*Class.forName("com.mysql.jdbc.Driver");
 			connect = DriverManager.getConnection(
 					"jdbc:mysql://localhost/swot", USERNAME, PASSWORD);
