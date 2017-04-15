@@ -14,7 +14,7 @@ import com.google.gson.JsonParser;
 
 public class mqttsubscriber  implements MqttCallback {
 	MqttClient client;
-	static double tempValue;
+	public static double tempValue;
 	static String unitOfMeasurement;
 	
 	public mqttsubscriber() {
@@ -30,10 +30,6 @@ public class mqttsubscriber  implements MqttCallback {
 			client.connect();
 			client.setCallback(this);
 			client.subscribe("tempMeasurement");
-/*			MqttMessage message = new MqttMessage();
-			message.setPayload("Hi from MQTT".getBytes());
-			client.publish("foo", message);
-*/
 			} catch (MqttException e) {
 			e.printStackTrace();
 		}
@@ -49,6 +45,11 @@ public class mqttsubscriber  implements MqttCallback {
         tempValue= jsonObject.get("tempValue").getAsDouble();	
         unitOfMeasurement= jsonObject.get("unitofMeasurement").getAsString();
 		System.out.println("received tempValue"+tempValue);
+		
+		swotsuite.senML.senMLData.writingsenML();
+		
+		
+		
 		swotsuite.application.main.Main.processdata();
 	}
 
