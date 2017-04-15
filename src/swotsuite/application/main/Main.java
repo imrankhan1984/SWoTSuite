@@ -1,7 +1,18 @@
 package swotsuite.application.main;
 
 import java.io.FileWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Attribute;
 
 import semantic.data.annotator.SemanticAnnotator;
 import swotsuite.application.framework.ExecuteQueryEngine;
@@ -42,7 +53,14 @@ public class Main {
 	   // Annotated - contains annotated data	   
 	   public static final String GENERATED_SEMANTIC_SENSOR_DATA = "./SupportedFiles/Annotated/generated_semantic_sensor_data.rdf";
 	   
-	   
+	   private static Connection connect = null;
+		private static Statement statement = null;
+		private ResultSet resultSet = null;
+		static PreparedStatement ps;
+
+		static final String USERNAME = "root";
+		static final String PASSWORD = "root";
+		
 	   public static void main(String[] args) {	
 		try {
 
@@ -98,7 +116,54 @@ public class Main {
 
 			// DISPLAY SMARTER DATA 
 			// USER TO DO: DISPLAY THE RESULT IN A USER FRIENDLY INTERFACE
-			System.out.println(result);	
+//			System.out.println(result);	
+			
+			
+			List<String> suggestion = new ArrayList<String>();
+			List<String> deduceInfo = new ArrayList<String>();
+
+			org.jsoup.nodes.Document doc = Jsoup.parse(result);
+			for (org.jsoup.nodes.Element element : doc.getAllElements()) {
+				for (Attribute attribute : element.attributes()) {
+					if (attribute.getValue().equalsIgnoreCase("suggest")) {
+						suggestion.add(element.text());
+					}
+					if (attribute.getValue().equalsIgnoreCase("deduce")) {
+						deduceInfo.add(element.text());
+					}
+				}
+			}
+
+			suggestion.remove(0);
+			deduceInfo.remove(0);
+			System.out.println("suggestion is " + suggestion + "deduceInfo is "
+					+ deduceInfo);
+
+			Iterator<String> suggestionIterator = suggestion.iterator();
+			Iterator<String> deduceInfoIterator = deduceInfo.iterator();
+
+			/*Class.forName("com.mysql.jdbc.Driver");
+			connect = DriverManager.getConnection(
+					"jdbc:mysql://localhost/swot", USERNAME, PASSWORD);
+
+			statement = connect.createStatement();
+
+			while (suggestionIterator.hasNext() && deduceInfoIterator.hasNext()) {
+
+				try {
+					ps = connect.prepareStatement("INSERT INTO m3data "
+							+ "(suggestion,deduceInfo) VALUES" + " ( '"
+							+ suggestionIterator.next() + "','"
+							+ deduceInfoIterator.next() + "')");
+
+					ps.executeUpdate();
+
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+
+			System.out.println("Successfully inserted data");*/
 
 		} catch (Exception e) {
 			e.printStackTrace();
