@@ -13,5 +13,7 @@
 	<classpathentry kind="lib" path="SupportedFiles/Jars/xml-apis-1.4.01.jar"/>
 	<classpathentry kind="lib" path="SupportedFiles/Jars/jsoup-1.7.2.jar"/>
 	<classpathentry kind="lib" path="SupportedFiles/Jars/com.mysql.jdbc_5.1.5.jar"/>
+	<classpathentry kind="lib" path="SupportedFiles/Jars/gson-2.2.2.jar"/>
+	<classpathentry kind="lib" path="SupportedFiles/Jars/org.eclipse.paho.client.mqttv3-1.1.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

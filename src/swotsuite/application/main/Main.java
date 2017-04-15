@@ -59,11 +59,16 @@ public class Main {
 		static final String USERNAME = "root";
 		static final String PASSWORD = "root";
 		
-	   public static void main(String[] args) {	
+	   
+		
+	//   public static void main(String[] args) {
+		public static void processdata(){
 		try {
 
+//			new swotsuite.pubsubmiddleware.mqttsubscriber().doDemo();
+			
 			// STEP: LOAD RAW DATA (SENML/XML) in this tutorial
-			String sensorMeasurements = ReadFile.readContentFile(SENSOR_DATA);
+		 	String sensorMeasurements = ReadFile.readContentFile(SENSOR_DATA);
 					
 			// STEP: SEMANTIC ANNOTATION
 			
