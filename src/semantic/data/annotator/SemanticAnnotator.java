@@ -30,7 +30,6 @@ This work is supported by the Com4Innov platform of the Pole SCS and DataTweet (
  *******************************************************************************/
 package semantic.data.annotator;
 
-
 import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
@@ -52,72 +51,78 @@ import com.hp.hpl.jena.reasoner.Reasoner;
 import com.hp.hpl.jena.reasoner.rulesys.GenericRuleReasoner;
 import com.hp.hpl.jena.reasoner.rulesys.Rule;
 import com.hp.hpl.jena.vocabulary.RDF;
+
 /**
- * Semantically annotate sensor data
- * Input: SenML sensor data (XML or JSON)
- * Output: Sensor data in Resource Description Framework (RDF) compatible with the M3 ontology
- * SenML: http://www.ietf.org/archive/id/draft-jennings-senml-10.txt
- * SenML: Media Types for Sensor Markup Language (SENML) [Jennings 2012]
- * @author Gyrard Amelie 
- * Last Updated: September 2014
+ * Semantically annotate sensor data Input: SenML sensor data (XML or JSON)
+ * Output: Sensor data in Resource Description Framework (RDF) compatible with
+ * the M3 ontology SenML:
+ * http://www.ietf.org/archive/id/draft-jennings-senml-10.txt SenML: Media Types
+ * for Sensor Markup Language (SENML) [Jennings 2012]
+ * 
+ * @author Gyrard Amelie Last Updated: September 2014
  */
 public class SemanticAnnotator {
 
 	/** To give a unique name to the URI **/
 	public static int URI_NUM_UNIQUE = 0;
-	
+
 	/** Jena model to store RDF data in a graph and manipulate it or query it **/
 	public Model model;
 
 	public SemanticAnnotator() {
 		model = ModelFactory.createDefaultModel();
-		model.setNsPrefix("m3",  Main. NAMESPACE_M3);
+		model.setNsPrefix("m3", Main.NAMESPACE_M3);
 	}
 
 	/**
-	 * Convert SenML/XML data into RDF according to the M3 ontology
-	 * and store it in google app engine triplestore
-	 * @param sensorMeasurements: SenML/XML data from WLBox
-	 * @param kindJDO to store it in google app engine datastore
-	 * @param keyNameJDO to store it in google app engine datastore
+	 * Convert SenML/XML data into RDF according to the M3 ontology and store it
+	 * in google app engine triplestore
+	 * 
+	 * @param sensorMeasurements
+	 *            : SenML/XML data from WLBox
+	 * @param kindJDO
+	 *            to store it in google app engine datastore
+	 * @param keyNameJDO
+	 *            to store it in google app engine datastore
 	 * @return
-	 * @throws IOException 
-	 * @throws JAXBException 
+	 * @throws IOException
+	 * @throws JAXBException
 	 */
-	public String convertXMLSenMLIntoRDF(String sensorMeasurements) throws IOException, JAXBException {
+	public String convertXMLSenMLIntoRDF(String sensorMeasurements)
+			throws IOException, JAXBException {
 
-			//System.out.println(sensorMeasurements);
-			Domain measurement;
-			
-			//TO MEASURE M3 CONVERTER PERFORMANCE
-			long startTime = System.currentTimeMillis();
-			
-			measurement = convertXMLToJavaObjects(sensorMeasurements);
-			if(measurement!=null){
-				convertJavaObjectsToM3(measurement);
-			}
-			
-			//TO MEASURE M3 CONVERTER PERFORMANCE
-			long stopTime = System.currentTimeMillis();
-			long total = stopTime - startTime;
-			//System.out.println("M3 converter in milliseconds: " + total);
-			
-			StringWriter writer = new StringWriter();
-		//	model.write(writer);
-			String result = writer.toString();
-			writer.close();
-			return result;
-			
+		// System.out.println(sensorMeasurements);
+		Domain measurement;
+
+		// TO MEASURE M3 CONVERTER PERFORMANCE
+		long startTime = System.currentTimeMillis();
+
+		measurement = convertXMLToJavaObjects(sensorMeasurements);
+		if (measurement != null) {
+			convertJavaObjectsToM3(measurement);
+		}
+
+		// TO MEASURE M3 CONVERTER PERFORMANCE
+		long stopTime = System.currentTimeMillis();
+		long total = stopTime - startTime;
+		// System.out.println("M3 converter in milliseconds: " + total);
+
+		StringWriter writer = new StringWriter();
+		// model.write(writer);
+		String result = writer.toString();
+		writer.close();
+		return result;
+
 	}
-
 
 	/**
 	 * Convert an XML file into java object (MeasurementSenml)
+	 * 
 	 * @param Measurements
 	 * @return
 	 * @throws JAXBException
 	 */
-	public Domain convertXMLToJavaObjects(String result) throws JAXBException{
+	public Domain convertXMLToJavaObjects(String result) throws JAXBException {
 		JAXBContext context = JAXBContext.newInstance(Domain.class);
 		Unmarshaller um = context.createUnmarshaller();
 		Domain measurement = (Domain) um.unmarshal(new StringReader(result));
@@ -126,21 +131,26 @@ public class SemanticAnnotator {
 
 	/**
 	 * Convert java object (MeasurementsSenml) into RDF data and save in file
+	 * 
 	 * @param measurement
 	 * @param fileSaved
 	 * @throws IOException
 	 */
-	public Model convertJavaObjectsToM3(Domain senmls) throws IOException{
+	public Model convertJavaObjectsToM3(Domain senmls) throws IOException {
 		Model infModel = null;
 		for (Measurements senml : senmls.senmlList) {
-			if (senml!=null && senml.elementList!=null ){//convertit que une partie
+			if (senml != null && senml.elementList != null) {// convertit que
+																// une partie
 				for (Measurement element : senml.elementList) {
 
 					String uri = createUriUnique();
-					Resource measurementURI = createMeasurementInstance(model, uri, element, senml.bn);
-					Resource sensorURI = createSensorInstance(model, senml.bn, measurementURI);
-					createFeatureOfInterestInstance(model, senmls.getNameZone(), sensorURI);
-					infModel = addTypeSensorMeasurementAccordingToContext();//senmls.getNameZone()
+					Resource measurementURI = createMeasurementInstance(model,
+							uri, element, senml.bn);
+					Resource sensorURI = createSensorInstance(model, senml.bn,
+							measurementURI);
+					createFeatureOfInterestInstance(model,
+							senmls.getNameZone(), sensorURI);
+					infModel = addTypeSensorMeasurementAccordingToContext();// senmls.getNameZone()
 
 				}
 			}
@@ -148,74 +158,102 @@ public class SemanticAnnotator {
 		}
 		System.out.println("Result semantic annotation: ");
 		infModel.write(System.out);
-		//GenericJDO.createOrUpdateMeasurementsSaved(kindJDO, keyNameJDO, infModel);
-		//System.out.println("kindJDO:" + kindJDO + " keyNameJDO:" + keyNameJDO);
+		// GenericJDO.createOrUpdateMeasurementsSaved(kindJDO, keyNameJDO,
+		// infModel);
+		// System.out.println("kindJDO:" + kindJDO + " keyNameJDO:" +
+		// keyNameJDO);
 
 		return infModel;
 	}
 
 	/**
 	 * Create a MeasurementSenml into RDF
+	 * 
 	 * @param model
 	 * @param measurementURI
 	 * @param element
 	 * @throws IOException
 	 */
-	public Resource createMeasurementInstance(Model model, String measurementURI, Measurement element, String baseName) throws IOException{
-		Property hasName = ResourceFactory.createProperty(Main. NAMESPACE_M3, "hasName"); 
-		Property hasValue = ResourceFactory.createProperty(Main. NAMESPACE_M3, "hasValue"); 
-		Property hasTime = ResourceFactory.createProperty(Main. NAMESPACE_M3, "hasDateTimeValue"); 
-		Property hasUnit = ResourceFactory.createProperty(Main. NAMESPACE_M3, "hasUnit");
+	public Resource createMeasurementInstance(Model model,
+			String measurementURI, Measurement element, String baseName)
+			throws IOException {
+		Property hasName = ResourceFactory.createProperty(Main.NAMESPACE_M3,
+				"hasName");
+		Property hasValue = ResourceFactory.createProperty(Main.NAMESPACE_M3,
+				"hasValue");
+		Property hasTime = ResourceFactory.createProperty(Main.NAMESPACE_M3,
+				"hasDateTimeValue");
+		Property hasUnit = ResourceFactory.createProperty(Main.NAMESPACE_M3,
+				"hasUnit");
 
 		Resource resource = model.createResource(measurementURI);
-		resource.addProperty(RDF.type, model.getResource(Main. NAMESPACE_M3 + "Measurement"));
+		resource.addProperty(RDF.type,
+				model.getResource(Main.NAMESPACE_M3 + "Measurement"));
 
-		resource.addProperty(hasName, ResourceFactory.createTypedLiteral(element.getName(), XSDDatatype.XSDstring)); 	
-		resource.addProperty(hasValue, ResourceFactory.createTypedLiteral(Double.toString(element.getValue()), XSDDatatype.XSDdecimal));
-		resource.addProperty(hasTime, ResourceFactory.createTypedLiteral(Double.toString(element.getTime()),  XSDDatatype.XSDdateTime )); 		
-		
-		
-		
-		resource.addProperty(hasUnit, ResourceFactory.createTypedLiteral(element.getUnits(),  XSDDatatype.XSDstring)); 
+		resource.addProperty(hasName, ResourceFactory.createTypedLiteral(
+				element.getName(), XSDDatatype.XSDstring));
+		resource.addProperty(hasValue, ResourceFactory.createTypedLiteral(
+				Double.toString(element.getValue()), XSDDatatype.XSDdecimal));
+		resource.addProperty(hasTime, ResourceFactory.createTypedLiteral(
+				Double.toString(element.getTime()), XSDDatatype.XSDdateTime));
+
+		resource.addProperty(hasUnit, ResourceFactory.createTypedLiteral(
+				element.getUnits(), XSDDatatype.XSDstring));
 		return resource;
 	}
 
-	public Resource createFeatureOfInterestInstance(Model model, String zone, Resource sensorUri) throws IOException{
-		String featureOfInterestUri = Main. NAMESPACE_M3 + zone;
-		Property observes = ResourceFactory.createProperty(Main. NAMESPACE_M3, "observes"); 
-		Resource featureOfInterestResource = model.createResource(featureOfInterestUri);
-		featureOfInterestResource.addProperty(RDF.type, model.getResource(Main. NAMESPACE_M3 + "FeatureOfInterest"));
-		sensorUri.addProperty(observes, featureOfInterestResource); 
+	public Resource createFeatureOfInterestInstance(Model model, String zone,
+			Resource sensorUri) throws IOException {
+		String featureOfInterestUri = Main.NAMESPACE_M3 + zone;
+		Property observes = ResourceFactory.createProperty(Main.NAMESPACE_M3,
+				"observes");
+		Resource featureOfInterestResource = model
+				.createResource(featureOfInterestUri);
+		featureOfInterestResource.addProperty(RDF.type,
+				model.getResource(Main.NAMESPACE_M3 + "FeatureOfInterest"));
+		sensorUri.addProperty(observes, featureOfInterestResource);
 		return featureOfInterestResource;
 	}
 
-	public Resource createSensorInstance(Model model, String sensorName, Resource measurementURI) throws IOException{
-		String sensorURI = Main. NAMESPACE_M3 + sensorName;
-		Property produces = ResourceFactory.createProperty(Main. NAMESPACE_M3, "produces"); 
+	public Resource createSensorInstance(Model model, String sensorName,
+			Resource measurementURI) throws IOException {
+		String sensorURI = Main.NAMESPACE_M3 + sensorName;
+		Property produces = ResourceFactory.createProperty(Main.NAMESPACE_M3,
+				"produces");
 		Resource resource = model.createResource(sensorURI);
-		resource.addProperty(RDF.type, model.getResource(Main. NAMESPACE_M3 + "Sensor"));
-		resource.addProperty(produces, measurementURI); 
+		resource.addProperty(RDF.type,
+				model.getResource(Main.NAMESPACE_M3 + "Sensor"));
+		resource.addProperty(produces, measurementURI);
 		return resource;
 	}
 
-
-	public String createUriUnique(){
-		String uri = Main. NAMESPACE_M3 + "Measurement"+ URI_NUM_UNIQUE;
-		URI_NUM_UNIQUE ++;
+	public String createUriUnique() {
+		String uri = Main.NAMESPACE_M3 + "Measurement" + URI_NUM_UNIQUE;
+		URI_NUM_UNIQUE++;
 		return uri;
 	}
 
 	/**
-	 * Add a more specific type to understand the context
-	 * ex domain = weather, measurement = temperature => new type = weatherTemperature
-	 * easier for reasoning after
+	 * Add a more specific type to understand the context ex domain = weather,
+	 * measurement = temperature => new type = weatherTemperature easier for
+	 * reasoning after
+	 * 
 	 * @return
 	 */
-	public Model addTypeSensorMeasurementAccordingToContext(){//Resource measurementURI, Measurement element, String zoneName
-		Reasoner reasoner = new GenericRuleReasoner(Rule.rulesFromURL(Main.RULES_M3_SEMANTIC_ANNOTATION));// read rules
+	public Model addTypeSensorMeasurementAccordingToContext() {// Resource
+																// measurementURI,
+																// Measurement
+																// element,
+																// String
+																// zoneName
+		Reasoner reasoner = new GenericRuleReasoner(
+				Rule.rulesFromURL(Main.RULES_M3_SEMANTIC_ANNOTATION));// read
+																		// rules
 		reasoner.setDerivationLogging(true);
-		InfModel infModel = ModelFactory.createInfModel(reasoner, model); //apply the reasoner
-		
+		InfModel infModel = ModelFactory.createInfModel(reasoner, model); // apply
+																			// the
+																			// reasoner
+
 		model = infModel;
 
 		return infModel;

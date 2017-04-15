@@ -32,15 +32,16 @@ package swotsuite.application.framework;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
- 
+
 /**
  * Object to represent the sensor measurements after the reasoning
+ * 
  * @author Amelie Gyrard
- *
+ * 
  */
 @XmlRootElement(name = "experiment")
 public class ResultDomainKnowledge {
-	
+
 	String onto;
 	String dataset;
 	String rule;
@@ -50,7 +51,7 @@ public class ResultDomainKnowledge {
 	String genericAppliUri;
 	String genericAppliLabel;
 	String genericAppliComment;
-	
+
 	@XmlElement
 	public String getGenericAppliUri() {
 		return genericAppliUri;
@@ -59,7 +60,7 @@ public class ResultDomainKnowledge {
 	public void setGenericAppliUri(String m2mappliUri) {
 		this.genericAppliUri = m2mappliUri;
 	}
-	
+
 	@XmlElement
 	public String getGenericAppliLabel() {
 		return genericAppliLabel;
@@ -96,11 +97,8 @@ public class ResultDomainKnowledge {
 		this.typeRecommendedUri = typeRecommendedUri;
 	}
 
-	
-	
-	
 	@Override
-	public String toString(){
+	public String toString() {
 		String result = "Applilabel=" + genericAppliLabel + ", ";
 		result += "Applicomment=" + genericAppliComment + ", ";
 		result += "Onto=" + onto + ", ";
@@ -147,10 +145,5 @@ public class ResultDomainKnowledge {
 	public void setSparql(String sparql) {
 		this.sparql = sparql;
 	}
-	
 
-	
-	
-
-	
 }

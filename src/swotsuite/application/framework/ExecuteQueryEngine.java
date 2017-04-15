@@ -30,8 +30,6 @@ This work is supported by the Com4Innov platform of the Pole SCS and DataTweet (
  *******************************************************************************/
 package swotsuite.application.framework;
 
-
-
 import java.util.ArrayList;
 
 import com.hp.hpl.jena.query.Query;
@@ -46,11 +44,11 @@ import com.hp.hpl.jena.rdf.model.RDFNode;
 
 /**
  * Class to design a generic SPARQL query for all semantic-based IoT scenarios
+ * 
  * @author Amelie Gyrard
- *
+ * 
  */
 public class ExecuteQueryEngine {
-
 
 	public Model model;
 	public Query query;
@@ -58,11 +56,12 @@ public class ExecuteQueryEngine {
 	public ExecuteQueryEngine(Model model, String sparqlRequest) {
 		super();
 		this.model = model;
-		
-		//load the sparql query
-		this.query = QueryFactory.create(ReadFile.readContentFile(sparqlRequest));
+
+		// load the sparql query
+		this.query = QueryFactory.create(ReadFile
+				.readContentFile(sparqlRequest));
 	}
-	
+
 	public ExecuteQueryEngine(Model model, Query query) {
 		super();
 		this.model = model;
@@ -71,41 +70,43 @@ public class ExecuteQueryEngine {
 
 	/**
 	 * really important returns directly returns the jena sparql result
-	 * @param var variables to replace in the sparql query
+	 * 
+	 * @param var
+	 *            variables to replace in the sparql query
 	 * @return xml sparql result
 	 */
-	public String getSelectResultAsXML(ArrayList<VariableSparql> var){
+	public String getSelectResultAsXML(ArrayList<VariableSparql> var) {
 
-		QueryExecution qe = replaceVariableInRequest(this.model, this.query, var);
-		//get result from sparql request
-		ResultSet results = qe.execSelect() ;
+		QueryExecution qe = replaceVariableInRequest(this.model, this.query,
+				var);
+		// get result from sparql request
+		ResultSet results = qe.execSelect();
 		String res = "No results";
 		res = ResultSetFormatter.asXMLString(results);
 
 		qe.close();
 		return res;
 	}
-	
-	public static QueryExecution replaceVariableInRequest(Model model, Query query, ArrayList<VariableSparql> var){
+
+	public static QueryExecution replaceVariableInRequest(Model model,
+			Query query, ArrayList<VariableSparql> var) {
 		QueryExecution qe = null;
 		RDFNode node = null;
 		QuerySolutionMap initialBinding = new QuerySolutionMap();
-		//replace sparql request by variables
-		if(var!=null){
+		// replace sparql request by variables
+		if (var != null) {
 
-			for (VariableSparql variableSparql : var) {				
-				if (variableSparql.isLiterral()){
+			for (VariableSparql variableSparql : var) {
+				if (variableSparql.isLiterral()) {
 					node = model.createLiteral(variableSparql.getValue());
-				}
-				else{
+				} else {
 					node = model.getResource(variableSparql.getValue());
-					//System.out.println("node: " + node);
+					// System.out.println("node: " + node);
 				}
-				initialBinding.add(variableSparql.getVariableName(), node);			
-			}		
+				initialBinding.add(variableSparql.getVariableName(), node);
+			}
 			qe = QueryExecutionFactory.create(query, model, initialBinding);
-		}
-		else{
+		} else {
 			qe = QueryExecutionFactory.create(query, model);
 		}
 		return qe;

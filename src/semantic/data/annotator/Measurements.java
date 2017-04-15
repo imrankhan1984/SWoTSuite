@@ -36,20 +36,20 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 
 /**
- * Object which transforms XML data to RDF data.
- * XML data are from the Eurecom API senml
- * We convert these XML data into RDF data
+ * Object which transforms XML data to RDF data. XML data are from the Eurecom
+ * API senml We convert these XML data into RDF data
+ * 
  * @author Amelie Gyrard
- *
+ * 
  */
 public class Measurements {
-	
-	String bn ;
-	
-//	@XmlElementWrapper(name="senml")
+
+	String bn;
+
+	// @XmlElementWrapper(name="senml")
 	@XmlElement(name = "e")
 	public ArrayList<Measurement> elementList;
-	
+
 	@XmlAttribute(name = "bn")
 	public String getBn() {
 		return bn;
@@ -60,12 +60,11 @@ public class Measurements {
 		System.out.println("set bn" + bn);
 	}
 
-/*	public ArrayList<Element> getElementList() {
-		return elementList;
-	}
+	/*
+	 * public ArrayList<Element> getElementList() { return elementList; }
+	 * 
+	 * public void setElementList(ArrayList<Element> elementList) {
+	 * this.elementList = elementList; }
+	 */
 
-	public void setElementList(ArrayList<Element> elementList) {
-		this.elementList = elementList;
-	}	*/
-
-} 
+}

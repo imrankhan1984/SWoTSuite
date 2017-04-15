@@ -38,15 +38,14 @@ import com.hp.hpl.jena.reasoner.rulesys.GenericRuleReasoner;
 import com.hp.hpl.jena.reasoner.rulesys.Rule;
 
 /**
- * The generic semantic-based IoT application
- * We try to design all application in this way
- * The other files in this package should be adapted to this generic class
+ * The generic semantic-based IoT application We try to design all application
+ * in this way The other files in this package should be adapted to this generic
+ * class
  * 
  * @author Amelie Gyrard
  * 
- * Created 2015 - 2015 PhD Thesis
- * Update June 2016
- *
+ *         Created 2015 - 2015 PhD Thesis Update June 2016
+ * 
  */
 public class GenericApplication {
 
@@ -55,38 +54,39 @@ public class GenericApplication {
 	String keynameJDO;
 	String query;
 
-
 	public GenericApplication() {
 		model = ModelFactory.createDefaultModel();
 	}
-	
+
 	// constructor with data stored in the Jena model
 	public GenericApplication(Model model) {
 		this.model = model;
 
 	}
-	
-	
+
 	/**
-	 * Apply the Jena reasoner
-	 * https://jena.apache.org/documentation/inference/
-	 * Execute the Sensor-based Linked Open Rules (S-LOR) component form the M3 framework
-	 * @param JenaRuleFile where are the jena rules
+	 * Apply the Jena reasoner https://jena.apache.org/documentation/inference/
+	 * Execute the Sensor-based Linked Open Rules (S-LOR) component form the M3
+	 * framework
+	 * 
+	 * @param JenaRuleFile
+	 *            where are the jena rules
 	 * @return the model with inference
 	 */
-	public Model executeReasoningEngine(String JenaRuleFile){
-		
-		//LOAD THE JENA RULES TO DEDUCE MEANINGFUL KNOWLEDGE
-		Reasoner reasoner = new GenericRuleReasoner(Rule.rulesFromURL(JenaRuleFile));// read rules
-		
-		//DO NOT DELETE - REMINDER FOR SOUMYA 
-		//for android use Rule.parseRule 
+	public Model executeReasoningEngine(String JenaRuleFile) {
+
+		// LOAD THE JENA RULES TO DEDUCE MEANINGFUL KNOWLEDGE
+		Reasoner reasoner = new GenericRuleReasoner(
+				Rule.rulesFromURL(JenaRuleFile));// read rules
+
+		// DO NOT DELETE - REMINDER FOR SOUMYA
+		// for android use Rule.parseRule
 		reasoner.setDerivationLogging(true);
-		
-		//APPLY THE JENA REASONING ENGINE
+
+		// APPLY THE JENA REASONING ENGINE
 		InfModel inf = ModelFactory.createInfModel(reasoner, this.model);
-		
-		//RETURN DATA WITH MORE MEANINGFUL KNOWLEDGE
+
+		// RETURN DATA WITH MORE MEANINGFUL KNOWLEDGE
 		return inf;
 	}
 

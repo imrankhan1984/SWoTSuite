@@ -37,25 +37,29 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 import com.hp.hpl.jena.rdf.model.Model;
+
 //import sun.misc.IOUtils;
 
 /**
- * Funtions to read file from a path and enrich the jena model or get the content of the file in a string
+ * Funtions to read file from a path and enrich the jena model or get the
+ * content of the file in a string
+ * 
  * @author Amelie gyrard
- *
+ * 
  */
 public class ReadFile {
 
-
 	/**
-	 * Read ontologies or RDF dataset, included directly from the file (a path) and add it to the jena model
+	 * Read ontologies or RDF dataset, included directly from the file (a path)
+	 * and add it to the jena model
+	 * 
 	 * @param model
 	 * @param file
 	 */
-	public static void enrichJenaModelOntologyDataset(Model model, String file){
+	public static void enrichJenaModelOntologyDataset(Model model, String file) {
 		try {
 			InputStream in = new FileInputStream(file);
-			model.read( in, file );//file:"+
+			model.read(in, file);// file:"+
 			in.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -63,29 +67,28 @@ public class ReadFile {
 		}
 	}
 
-
 	/**
-	 * Read the content of a file, ex. raw data, Sparql, or ontologies or datasets and store it in string
+	 * Read the content of a file, ex. raw data, Sparql, or ontologies or
+	 * datasets and store it in string
+	 * 
 	 * @param file
 	 * @return String the content of the file
 	 */
-	public static String readContentFile(String file){
-		String text="";
-		try{
-			InputStream ips=new FileInputStream(file); 
-			InputStreamReader ipsr=new InputStreamReader(ips);
-			BufferedReader br=new BufferedReader(ipsr);
+	public static String readContentFile(String file) {
+		String text = "";
+		try {
+			InputStream ips = new FileInputStream(file);
+			InputStreamReader ipsr = new InputStreamReader(ips);
+			BufferedReader br = new BufferedReader(ipsr);
 			String ligne;
-			while ((ligne=br.readLine())!=null){
-				text+=ligne+"\n";
+			while ((ligne = br.readLine()) != null) {
+				text += ligne + "\n";
 			}
-			br.close(); 
-		}		
-		catch (Exception e){
+			br.close();
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return text;
 	}
-	
 
 }

@@ -33,63 +33,63 @@ package semantic.data.annotator;
 import javax.xml.bind.annotation.XmlAttribute;
 
 /**
- * Object which transforms XML data to RDF data.
- * XML data are from the Eurecom API senml
- * We convert these XML data into RDF data
+ * Object which transforms XML data to RDF data. XML data are from the Eurecom
+ * API senml We convert these XML data into RDF data
+ * 
  * @author Amelie Gyrard
- *
+ * 
  */
 public class Measurement {
 
-  private String name;
-  private String type;
-  private double time;
-  private double value;
-  private String units;
+	private String name;
+	private String type;
+	private double time;
+	private double value;
+	private String units;
 
-@XmlAttribute(name = "n")
-  public String getName() {
-    return name;
-  }
+	@XmlAttribute(name = "n")
+	public String getName() {
+		return name;
+	}
 
-public void setName(String name) {
-    this.name = name;
-  }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-@XmlAttribute(name = "type")
-  public String getType() {
-	return type;
+	@XmlAttribute(name = "type")
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	@XmlAttribute(name = "t")
+	public double getTime() {
+		return time;
+	}
+
+	public void setTime(double time) {
+		this.time = time;
+	}
+
+	@XmlAttribute(name = "v")
+	public double getValue() {
+		return value;
+	}
+
+	public void setValue(double value) {
+		this.value = value;
+	}
+
+	@XmlAttribute(name = "u")
+	public String getUnits() {
+		return units;
+	}
+
+	public void setUnits(String units) {
+		this.units = units;
+	}
+
 }
-
-public void setType(String type) {
-	this.type = type;
-}
-
-  @XmlAttribute(name = "t")
-  public double getTime() {
-    return time;
-  }
-
-  public void setTime(double time) {
-    this.time = time;
-  }
-
-  @XmlAttribute(name = "v")
-  public double getValue() {
-    return value;
-  }
-
-  public void setValue(double value) {
-    this.value = value;
-  }
-  
-  @XmlAttribute(name = "u")
-  public String getUnits() {
-    return units;
-  }
-
-  public void setUnits(String units) {
-    this.units = units;
-  }
-
-} 

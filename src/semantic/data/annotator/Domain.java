@@ -44,20 +44,19 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * The domain where is deployed the sensor described in the SenML language
+ * 
  * @author Amelie gyrard
- *
+ * 
  */
-@XmlRootElement(name="zone")
+@XmlRootElement(name = "zone")
 public class Domain {
-	
-	String nameZone ;
-	
-	//@XmlElementWrapper(name="zone")
+
+	String nameZone;
+
+	// @XmlElementWrapper(name="zone")
 	@XmlElement(name = "senml")
 	public ArrayList<Measurements> senmlList;
 
-
-	
 	@XmlAttribute(name = "name")
 	public String getNameZone() {
 		return nameZone;
@@ -66,13 +65,11 @@ public class Domain {
 	public void setNameZone(String nameZone) {
 		this.nameZone = nameZone;
 	}
-/*
-	public ArrayList<Senml> getSenmlList() {
-		return senmlList;
-	}
+	/*
+	 * public ArrayList<Senml> getSenmlList() { return senmlList; }
+	 * 
+	 * public void setSenmlList(ArrayList<Senml> senmlList) { this.senmlList =
+	 * senmlList; }
+	 */
 
-	public void setSenmlList(ArrayList<Senml> senmlList) {
-		this.senmlList = senmlList;
-	}*/
-
-} 
+}
