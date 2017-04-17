@@ -26,7 +26,7 @@ public class mqttSubscriber implements MqttCallback {
 
 	public void doDemo() {
 		try {
-			client = new MqttClient("tcp://192.168.0.101:1883",
+			client = new MqttClient("tcp://192.168.0.103:1883",
 					MqttClient.generateClientId(), new MemoryPersistence());
 			client.connect();
 			client.setCallback(this);

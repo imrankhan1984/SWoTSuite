@@ -17,7 +17,7 @@ public class wsPublisher {
 		 Gson gson = new Gson();
 		wsPublisher client = new wsPublisher();
 		// socket tcp connection
-		String ip = "192.168.0.101";
+		String ip = "192.168.0.103";
 		int port = 6969;
 		try {
 			client.socketConnect(ip, port);
@@ -31,7 +31,7 @@ public class wsPublisher {
 		// writes and receives the message
 		String data = gson.toJson(newValue);
 		//String message = "Hello from Java Client";
-		System.out.println("Sending msg to node server" + data);
+		System.out.println("Sending suggestions to server" + data);
 		client.echo(data);
 	}
 
