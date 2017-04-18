@@ -17,7 +17,7 @@ For More detail, refer the following resources
 
 - Our papers at ISWC 2016: https://arxiv.org/abs/1609.09014 (8 pages). 
 - Application development process using SWoTSuite: https://www.youtube.com/watch?v=BMP8CXtXzGo
-- SWoTSuite: A Toolkit for Prototyping End-to-End Semantic Web of Things Applications at WWW 2017
+- SWoTSuite: A Toolkit for Prototyping End-to-End Semantic Web of Things Applications at WWW 2017 (URL: http://dl.acm.org/citation.cfm?id=3054736)
 
 
 ## Installation
